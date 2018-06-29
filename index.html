@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>王菲菲H5学习</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            margin: 20px;
+            text-align: center;
+            /*background-color: red;*/
+        }
+        .name{
+            margin: 20px;
+            text-align: center;
+            /*background-color: red;*/
+        }
+        li{
+            width: 100px;
+            font: 26px/50px 楷体;
+            list-style: none;
+            float: left;
+        }
+    </style>
+    <script>
+        var phoneWidth = parseInt(window.screen.width);
+        var phoneScale = phoneWidth/640;
+        var ua = navigator.userAgent;
+        if(/Android (\d+\.\d+)/.test(ua)){
+            var version = parseFloat(RegExp.$1);
+            if(version>2.3){
+                document.write('<meta name="viewport" content="width=640, minimum-scale = '+phoneScale+', maximum-scale= '+phoneScale+',target-densitydpi=device-dpi">');
+            }else{
+                document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+            }
+        }else {
+            document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+        }
+    </script>
+</head>
+<body>
+    <div class="box">
+        <div class="name">
+        <h1>王菲菲学习笔记</h1>
+        </div>
+        <div class="nav">
+            <ul>
+                <li>H5</li>
+                <li>JS</li>
+                <li>jQuery</li>
+            </ul>
+        </div>
+        <div class="content">
+
+        </div>
+        <div class="bottom">
+
+        </div>
+    </div>
+</body>
+</html>
