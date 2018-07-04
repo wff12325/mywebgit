@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>四季交替整页</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body,div{
+            width: 100%;
+            height: 100%;
+        }
+        @keyframes changeC {
+            0%{
+                opacity: 0;
+            }
+            20%{
+                opacity: 1;
+            }
+            40%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+        @keyframes changeX {
+            0%{
+                opacity: 0;
+            }
+            20%{
+                opacity: 0;
+            }
+            40%{
+                opacity: 1;
+            }
+            60%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+        @keyframes changeQ {
+            0%{
+                opacity: 0;
+            }
+            40%{
+                opacity: 0;
+            }
+            60%{
+                opacity: 1;
+            }
+            80%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+        @keyframes changeD {
+            0%{
+                opacity: 0;
+            }
+            60%{
+                opacity: 0;
+            }
+            80%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+        div{
+            text-align: center;
+            font: 100px 微软雅黑;
+            padding-top: 30%;
+            position: absolute;
+        }
+        .c{
+            background-color: green;
+            animation: changeC 5s infinite;
+        }
+        .x{
+            background-color: red;
+            animation: changeX 5s infinite;
+        }
+        .q{
+            background-color: yellow;
+            animation: changeQ 5s infinite;
+        }
+        .d{
+            background-color: whitesmoke;
+            animation: changeD 5s infinite;
+        }
+
+    </style>
+</head>
+<body>
+<div class="c">
+    春
+</div>
+<div class="x">
+    夏
+</div>
+<div class="q">
+    秋
+</div>
+<div class="d">
+    冬
+</div>
+</body>
+</html>
