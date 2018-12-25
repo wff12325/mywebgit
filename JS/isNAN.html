@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NAN检测</title>
+    <script>
+        window.onload = function(){
+            var oTxt1 = document.getElementById("num1");
+            var oTxt2 = document.getElementById("num2");
+            var oBtn = document.getElementById("sum");
+            oBtn.onclick = function(){
+                var num = parseInt(oTxt1.value)+parseInt(oTxt2.value);
+                if(isNaN(num)){
+                    alert("您输入的有误");
+                }else{
+                    alert(num);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="text" id="num1">
+<input type="text" id="num2">
+<input type="button" id="sum">
+</body>
+</html>
