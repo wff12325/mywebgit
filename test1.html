@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>项目概览</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        table{
+            width: 97%;
+            font: 16px/30px "黑体";
+            border-spacing: 1px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+        }
+        tr:nth-child(odd){
+            border: 1px solid #ccc;
+            background-color: #fdfdfe;
+        }
+        tr:nth-child(even){
+            border: 1px solid #ccc;
+            background-color: #f0f0f0;
+        }
+        ul li{
+            list-style: none;
+            float: left;
+            margin-left:10px;
+        }
+        li:last-child{
+            margin-left:10px;
+            float: right;
+        }
+        .tb_name{
+            font: 18px/30px "黑体";
+        }
+        .tb_title td{
+            border: 1px solid #ccc;
+            box-shadow: darkgrey 0px 3px 2px;
+        }
+        #tb_active{
+            background-color: #fad8a6;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr><td colspan="19">
+                <ul>
+                    <li><img src="images/add16x16.gif" alt=""></li>
+                    <li class="tb_name">项目概览（项目经理）</li>
+                    <li>(共4个对象)</li>
+                </ul>
+            </td></tr>
+        <tr>
+            <td colspan="19">
+                <ul>
+                    <li><img src="images/add16x16.gif" alt=""></li>
+                    <li><img src="images/add16x16.gif" alt=""></li>
+                    <li><img src="images/add16x16.gif" alt=""></li>
+                    <li>| 操作</li>
+                    <li>
+                        <input type="text">
+                        <img src="images/add16x16.gif" alt="">
+                        <img src="images/add16x16.gif" alt="">
+                    </li>
+                </ul>
+
+            </td>
+        </tr>
+        <tr class="tb_title">
+            <td><input type="checkbox"></td><td></td><td>名称</td><td>任务状态</td><td>审批状态</td><td>规划开始时间</td><td>估计开始时间</td><td>规划完成时间</td><td>估计完成时间</td>
+            <td>是否逾期</td><td>规划工期</td><td>待审批任务数</td><td>项目评价状态</td><td>工期</td><td>规划工时</td><td>工时</td><td>填报工时</td><td>完功率</td><td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td><td><img src="images/add16x16.gif" alt=""></td><td>B07 YC4Y24国VI项目L3.3m&3.8m常规车</td><td></td><td>流程中</td><td></td><td>2017-11-01</td><td></td><td>2019-07-09</td>
+            <td></td><td></td><td>0</td><td>未完成</td><td>3464.0</td><td></td><td>13358.00547472</td><td></td><td>0.1</td><td></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td><td><img src="images/add16x16.gif" alt=""></td><td>B07 YC4Y24国VI项目L3.3m&3.8m常规车</td><td></td><td>流程中</td><td></td><td>2017-11-01</td><td></td><td>2019-07-09</td>
+            <td></td><td></td><td>0</td><td>未完成</td><td>3464.0</td><td></td><td>13358.00547472</td><td></td><td>0.1</td><td></td>
+        </tr>
+        <tr id="tb_active">
+            <td><input type="checkbox"></td><td><img src="images/add16x16.gif" alt=""></td><td>B07 YC4Y24国VI项目L3.3m&3.8m常规车</td><td></td><td>流程中</td><td></td><td>2017-11-01</td><td></td><td>2019-07-09</td>
+            <td></td><td></td><td>0</td><td>未完成</td><td>3464.0</td><td></td><td>13358.00547472</td><td></td><td>0.1</td><td></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td><td><img src="images/add16x16.gif" alt=""></td><td>B07 YC4Y24国VI项目L3.3m&3.8m常规车</td><td></td><td>流程中</td><td></td><td>2017-11-01</td><td></td><td>2019-07-09</td>
+            <td></td><td></td><td>0</td><td>未完成</td><td>3464.0</td><td></td><td>13358.00547472</td><td></td><td>0.1</td><td></td>
+        </tr>
+        <tr></tr>
+        <tfoot>
+        <tr>
+            <td colspan="19">(已选择0个对象)</td>
+        </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

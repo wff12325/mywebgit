@@ -8,9 +8,14 @@
             margin: 0;
             padding: 0;
         }
-        .bg_music img{
+        .bg_music{
             width: 6%;
             height: 6%;
+            float: right;
+        }
+        .bg_music img{
+            width: 100%;
+            height: 100%;
         }
         .box{
             margin: 20px;
@@ -79,6 +84,21 @@
             text-decoration: none;
             font: 18px/24px 楷体;
         }
+        .content_H5{
+            overflow: auto;
+            /*background-color: red;*/
+            /*border: 1px solid red;*/
+        }
+        .content_JS{
+            display: none;
+            overflow: auto;
+            /*background-color: yellow;*/
+        }
+        .content_jQuery{
+            display: none;
+            overflow: auto;
+            /*background-color: blue;*/
+        }
     </style>
     <script>
         var phoneWidth = parseInt(window.screen.width);
@@ -94,27 +114,63 @@
         }else {
             document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
         }
+        window.onload = function(){
+//            自动播放
+            function toggleSound(){
+                var music = document.getElementById("music");
+                console.log(music);
+                console.log(music.paused);
+                if(music.paused){
+                    music.paused = false;
+                    music.play();
+                }
+            }
+            setInterval(toggleSound(),1);
+//            按钮切换
+            var oBtn1 = document.getElementById("btn1");
+            var oBtn2 = document.getElementById("btn2");
+            var oBtn3 = document.getElementById("btn3");
+            oBtn1.onclick = function(){
+                document.getElementsByClassName("content_H5")[0].style.display = "block";
+                document.getElementsByClassName("content_JS")[0].style.display = "none";
+                document.getElementsByClassName("content_jQuery")[0].style.display = "none";
+            }
+            oBtn2.onclick = function(){
+                document.getElementsByClassName("content_H5")[0].style.display = "none";
+                document.getElementsByClassName("content_JS")[0].style.display = "block";
+                document.getElementsByClassName("content_jQuery")[0].style.display = "none";
+            }
+            oBtn3.onclick = function(){
+                document.getElementsByClassName("content_H5")[0].style.display = "none";
+                document.getElementsByClassName("content_JS")[0].style.display = "none";
+                document.getElementsByClassName("content_jQuery")[0].style.display = "block";
+            }
+
+        }
     </script>
 </head>
 <body>
-    <div class="bg_music"><img src="images/music.gif"></div>
+    <div class="bg_music">
+        <img src="images/music.gif">
+    </div>
+    <audio id="music" src="mp3/bg.mp3" preload="auto" controls="controls" style="display: none"></audio>
     <div class="box">
         <div class="name">
         <h1>学习笔记</h1>
         </div>
         <div class="nav">
             <ul>
-                <li>
+                <li id="btn1">
                     <div class="bg_left"></div>
                     <div class="bg_center"><a href="#">H5</a></div>
                     <div class="bg_right"></div>
                 </li>
-                <li>
+                <li id="btn2">
                     <div class="bg_left"></div>
                     <div class="bg_center"><a href="#">JS</a></div>
                     <div class="bg_right"></div>
                 </li>
-                <li>
+                <li id="btn3">
                     <div class="bg_left"></div>
                     <div class="bg_center"><a href="#">jQuery</a></div>
                     <div class="bg_right"></div>
@@ -135,7 +191,9 @@
                 </ul>
             </div>
             <div class="content_jQuery">
-
+                <ul>
+                    <li><a href="./JS/prompt.html">test</a></li>
+                </ul>
             </div>
         </div>
         <div class="bottom">

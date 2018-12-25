@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .content{
+            border: 2px solid black;
+        }
+        .content h3{
+            margin-left:20px;
+        }
+        .content form{
+            margin: 20px;
+        }
+        .content form>input{
+            font: 16px/24px "黑体";
+            color: white;
+            background-color: #6699cc;
+        }
+        table{
+            width: 95%;
+            margin: 20px 0px;
+            border-spacing: 1px;
+            /*border-collapse: collapse;*/
+            border: 3px solid #cccccc;
+            text-align: center;
+            font: 16px/30px "黑体";
+        }
+        th{
+            border: 1px solid #ccc;
+            box-shadow: darkgrey 0px 3px 2px;
+            background-color: #fdfdfe;
+        }
+        tr:nth-child(odd){
+            border: 1px solid #ccc;
+            background-color: #fdfdfe;
+        }
+        tr:nth-child(even){
+            border: 1px solid #ccc;
+            background-color: #f0f0f0;
+        }
+        .tb_title th{
+            border: 1px solid #ccc;
+            box-shadow: darkgrey 0px 3px 2px;
+        }
+        td{
+            /*font:14px/20px "黑体";*/
+            /*border: 1px solid #666666;*/
+        }
+    </style>
+</head>
+<body>
+    <div class="nav"></div>
+    <div class="content">
+        <h3>项目费用预算</h3>
+        <form action="">
+            <input type="button" value="增加新项目">
+            <input type="button" value="添加现有项目">
+            <input type="button" value="删除项目">
+            <input type="button" value="编制月度预算">
+            <input type="button" value="提交审核">
+            <input type="button" value="导出Excel">
+            <table>
+                <tr>
+                    <th rowspan="2" colspan="2">项目名称</th><th rowspan="2">项目负责人</th><th rowspan="2" colspan="2">年度预算（千元）</th><th colspan="7">预算明细</th><th rowspan="2">差旅费说明</th><th rowspan="2">状态</th>
+                </tr>
+                <tr>
+                    <th>委托/设计</th><th>试制</th><th>检测/试验</th><th>认证费</th><th>样品样车</th><th>差旅</th><th>评审/调研</th>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="pro"></td><td>XXX</td><td>XXX</td><td>合计</td><td>……</td><td>……</td><td>……</td><td>……</td><td>……</td><td>……</td><td>……</td><td>……</td><td>……</td><td>总体编制</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="pro"></td><td>XXX</td><td>XXX</td><td>合计</td><td>……</td><td>……</td><td>……</td><td>……</td><td>……</td><td>……</td><td>……</td><td>……</td><td>……</td><td>总体编制</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="pro"></td><td>XXX</td><td>XXX</td><td>合计</td><td>……</td><td>……</td><td>……</td><td>……</td><td>……</td><td>……</td><td>……</td><td>……</td><td>……</td><td>总体编制</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="pro"></td><td>XXX</td><td>XXX</td><td>合计</td><td>……</td><td>……</td><td>……</td><td>……</td><td>……</td><td>……</td><td>……</td><td>……</td><td>……</td><td>总体编制</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="pro"></td><td>XXX</td><td>XXX</td><td>合计</td><td>……</td><td>……</td><td>……</td><td>……</td><td>……</td><td>……</td><td>……</td><td>……</td><td>……</td><td>总体编制</td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div class="bottom"></div>
+</body>
+</html>
