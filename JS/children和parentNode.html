@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Children和parentNode</title>
+    <script>
+        window.onload = function(){
+            var aA = document.getElementsByTagName("a");
+            var i=0;
+            for(i;i<aA.length;i++){
+                aA[i].onclick = function(){
+                    this.parentNode.style.display = "none";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<ul>
+    <li>aaa <a href="javascript:;">隐藏</a></li>
+    <li>bbb <a href="javascript:;">隐藏</a></li>
+    <li>ccc <a href="javascript:;">隐藏</a></li>
+    <li>ddd <a href="javascript:;">隐藏</a></li>
+    <li>eee <a href="javascript:;">隐藏</a></li>
+</ul>
+</body>
+</html>

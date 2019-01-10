@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>运行代码</title>
+    <script>
+        window.onload = function(){
+            var oTxt = document.getElementById("txt1");
+            var oBtn = document.getElementById("btn1");
+            oBtn.onclick = function(){
+                var oNewWin=window.open("about:blank");
+                oNewWin.document.write(oTxt.value);
+            }
+        }
+    </script>
+</head>
+<body>
+<textarea name="" id="txt1" cols="30" rows="10"></textarea>
+<br>
+<input type="button" value="运行代码" id="btn1">
+</body>
+</html>

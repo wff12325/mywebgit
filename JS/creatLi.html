@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建li</title>
+    <script>
+        window.onload = function(){
+            var oTxt = document.getElementById("txt1");
+            var oBtn1 = document.getElementById("btn1");
+            var oBtn2 = document.getElementById("btn2");
+            var oUl = document.getElementById("ul1");
+            //appendChild
+            oBtn1.onclick = function(){
+                var oLi = document.createElement("li");
+                oLi.innerHTML = oTxt.value;
+                oUl.appendChild(oLi);
+            }
+            //父.insertBefore(子节点，谁之前)
+            oBtn2.onclick = function(){
+                var oLi = document.createElement("li");
+                var aLi = oUl.getElementsByTagName("li");
+                oLi.innerHTML = oTxt.value;
+                oUl.insertBefore(oLi,aLi[0]);
+            }
+
+        }
+    </script>
+</head>
+<body>
+<input type="text" id="txt1">
+<input type="button" id="btn1" value="创建li">
+<input type="button" id="btn2" value="在前面创建li">
+<ul id="ul1">
+    <li>aaa</li>
+</ul>
+</body>
+</html>
