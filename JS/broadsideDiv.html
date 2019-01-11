@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>侧边栏</title>
+    <style>
+        body{
+            height: 2000px;
+        }
+        #box1{
+            width: 50px;
+            height: 100px;
+            background-color: red;
+            /*position: fixed;*/
+            /*right:0;*/
+            /*top: 50%;*/
+            /*margin-top:-50px;*/
+
+            position: absolute;
+            right:0;
+        }
+    </style>
+    <script>
+        window.onresize=window.onload=window.onscroll = function(){
+            var oBox = document.getElementById("box1");
+            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            var clientTop = document.documentElement.clientHeight;
+            var top = scrollTop +(clientTop-oBox.offsetHeight)/2;
+            oBox.style.top = top+"px";
+        }
+    </script>
+</head>
+<body>
+<div id="box1">
+
+</div>
+</body>
+</html>
