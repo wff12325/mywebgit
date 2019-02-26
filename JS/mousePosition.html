@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标位置</title>
+    <script>
+        document.onclick = function(ev){
+            //ev FF
+            var oEvent = ev || event;
+            alert(oEvent.clientX+","+oEvent.clientY)
+        };
+    </script>
+</head>
+<body>
+
+</body>
+</html>

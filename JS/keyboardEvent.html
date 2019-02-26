@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KeyboardEvent</title>
+    <style>
+        div{
+            width: 40px;
+            height: 40px;
+            background-color: black;
+            position: absolute;
+            left: 500px;
+            top: 500px;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var oDiv = document.getElementsByTagName("div")[0];
+            document.onkeydown = function(ev){
+                var oEvent = ev || event;
+                switch (oEvent.keyCode){
+                    case 37:
+                        oDiv.style.left = oDiv.offsetLeft-10+"px";
+                        break;
+                    case 38:
+                        oDiv.style.top = (oDiv.offsetTop-10)+"px";
+                        break;
+                    case 39:
+                        oDiv.style.left = (oDiv.offsetLeft+10)+"px";
+                        break;
+                    case 40:
+                        oDiv.style.top = (oDiv.offsetTop+10)+"px";
+                        break;
+                    case 32:
+                        oDiv.style.backgroundColor = "red";
+                        break;
+                    default:
+                        alert("!");
+                        break;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div></div>
+</body>
+</html>
