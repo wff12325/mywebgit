@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rightClickMenu</title>
+    <style>
+        #ul1{
+            width: 100px;
+            height: 160px;
+            background-color: #ccc;
+            border: 1px solid black;
+            position: absolute;
+            display: none;
+        }
+        li{
+            list-style: none;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var oUl = document.getElementById("ul1");
+            document.oncontextmenu = function(ev){
+                var oEvent = ev || event;
+                oUl.style.left = oEvent.clientX+"px";
+                oUl.style.top = oEvent.clientY+"px";
+                oUl.style.display = "block";
+                return false;
+            }
+            document.onclick = function(){
+                oUl.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+<ul id="ul1">
+    <li>登录</li>
+    <li>登录</li>
+    <li>登录</li>
+    <li>登录</li>
+</ul>
+</body>
+</html>
